@@ -5,12 +5,12 @@
 /*
 * \brief Именованная константа "количество секунд в часе"
 */
-#define SECONDS_IN_HOUR 3600
+const int seconds_in_hour = 3600;
 
 /*
 * \brief Именованная константа "количество секунд в минуте"
 */
-#define SECONDS_IN_MINUTES 60
+const int seconds_in_minute = 60;
 
 /*
 * \brief пустой класс
@@ -33,7 +33,7 @@ public:
 class except3 : public std::invalid_argument {
     double num;
 public:
-    except3(const std::string msg, double n) : invalid_argument(msg), num(n) {}
+    except3(const std::string& msg, double n) : invalid_argument(msg), num(n) {}
     double arg() const { return num; }
 };
 
